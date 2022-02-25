@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        .tb1{
+
+        }
+
+        .tb1 .b{
+            width: 165px;
+        }
+
+        .tb1 .r{
+            height: 80px;
+        }
+
+        button{
+            width: 80px;
+            height: 40px;
+        }
+    </style>
+</head>
+<body>
+    <textarea id="sr" cols="53" rows="6"></textarea>
+<table class="tb1" >
+    <tr>
+        <td><button onclick="Nhapmot(7)">7</button></td>
+        <td><button onclick="Nhapmot(8)">8</button></td>
+        <td><button onclick="Nhapmot(9)">9</button></td>
+        <td><button onclick="Nhapmot('+')">+</button></td>
+        <td><button onclick="Xoa()">AC</button></td>
+    </tr>
+    <tr>
+        <td><button onclick="Nhapmot(4)">4</button></td>
+        <td><button onclick="Nhapmot(5)">5</button></td>
+        <td><button onclick="Nhapmot(6)">6</button></td>
+        <td><button onclick="Nhapmot('-')">-</button></td>
+        <td><button onclick="Nhapmot('*')">*</button></td>
+    </tr>
+    <tr>
+        <td><button onclick="Nhapmot(1)">1</button></td>
+        <td><button onclick="Nhapmot(2)">2</button></td>
+        <td><button onclick="Nhapmot(3)">3</button></td>
+        <td><button onclick="Nhapmot('/')">/</button></td>
+<!--        <td><button onclick="Nhap()">√</button></td>-->
+
+    </tr>
+    <tr>
+        <td colspan="2"><button onclick="Nhapmot(0)" class="b">0</button></td>
+        <td><button onclick="Nhapmot('.')">.</button></td>
+<!--        <button  class="decimal" value=".">.</button>-->
+        <td colspan="2"><button class="b" onclick="Tinh()">=</button></td>
+    </tr>
+</table>
+
+    <script>
+        function Nhapmot(data){
+            document.getElementById('sr').value += data;
+        }
+
+        function Tinh(){
+            document.getElementById('sr').value = eval(document.getElementById('sr').value);
+        }
+
+        function Xoa(){
+            document.getElementById('sr').value = '';
+        }
+        // function Nhap(){
+        //     document.getElementById('sr').innerHTML += '√' + Math.sqrt(document.getElementById(Nhapmot));
+        // }
+
+    </script>
+
+</body>
+</html>
